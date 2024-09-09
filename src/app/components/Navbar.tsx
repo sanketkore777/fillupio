@@ -97,27 +97,7 @@ export default function NavigationBar() {
         </NavbarItem>
       </NavbarContent>
 
-      {/* Mobile Menu */}
-      <NavbarMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href={item.href}
-              size="lg"
-            >
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      
     </Navbar>
   );
 }
